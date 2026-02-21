@@ -12,7 +12,7 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @PostMapping("/{postId}")
+    @PostMapping("/post/{postId}")
     public Comment createComment(@PathVariable Long postId, @RequestBody Comment comment){
         return commentService.addComment(postId,comment);
     }
